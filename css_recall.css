@@ -3,8 +3,29 @@
 
 /* To add multiple classes to one element ,separate each class name with space within the same class attribute --class="one two" ---so classes are .one and .two*/
 
-/*To select element with 2 classes -- class="one_selector two_selector"*/
+/*To select only elements with both the classes -- class="one_selector two_selector" (Chaining Selectors)*/
 .one_selector.two_selector {
     color: white;
 }
 
+/* To select multiple classes together (Grouping)*/
+.one_selector,
+.two_selector{
+    background-color: aliceblue;
+}
+
+/*Select a class B only if it is a child of class A(Descendant Combinator)*/
+.A .B{
+    color:aliceblue;
+}
+/* The above will apply to B only if it is a child of A/has a ancestor or parent called A as shown below.
+<div class="A">
+    <div class="B">
+    </div>
+</div>
+*/
+
+
+/*WHY ITS SEMANTIC TO ADD A WIDTH AND HEIGHT TO IMAGE ALWAYS
+in absence of a specified width and height ,in case image takes longer to load it will at first not take up any space and when its loaded will create a drastic shift in the content .This can be prevented by providing as specific width and height which will result in a reserved space being left from the start even if the image loads later thus preventing a drastic change in the content as in the former case .
+*/
