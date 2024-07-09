@@ -1,0 +1,10 @@
+/* New Concepts to recall and revise */
+
+
+/* To add multiple classes to one element ,separate each class name with space within the same class attribute --class="one two" ---so classes are .one and .two*/
+
+/*To select element with 2 classes -- class="one_selector two_selector"*/
+.one_selector.two_selector {
+    color: white;
+}
+
