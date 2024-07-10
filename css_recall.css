@@ -29,3 +29,24 @@
 /*WHY ITS SEMANTIC TO ADD A WIDTH AND HEIGHT TO IMAGE ALWAYS
 in absence of a specified width and height ,in case image takes longer to load it will at first not take up any space and when its loaded will create a drastic shift in the content .This can be prevented by providing as specific width and height which will result in a reserved space being left from the start even if the image loads later thus preventing a drastic change in the content as in the former case .
 */
+
+/*
+How does CSS choose which rule to apply to an element when there is multiple conflicting rules?
+**Specificity**
+CSS chooses this based on the specificity,among the conflicting rules the one with the highest specificity is chosen to be applied.
+Specificity order: 
+1.Inlne css(highest)
+2.selectors : 1.ID
+              2.Class
+              3.Type
+
+    If a rule uses multiple classes,then it has more specificity than a rule with 1 class.
+    (Note - chaining and combinators do not add to specificity,the only thing considered is *number* of classes)
+    Note - Universal selector(*) has no specificity value
+
+Inheritance - the rules of parent element gets inherited to child elements too.
+(note - specifically targeting/selecting child elements using selectors has more specificity than inheritance(so rules with selectors will be selected if there was conflict between inheritance and selector rule))
+
+Rule Order - if even after all the above are considered and still there is a conflict(i.e both rules have same specificity ) then the rule *written last* will be applied.
+
+*/
